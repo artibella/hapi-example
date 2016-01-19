@@ -1,0 +1,18 @@
+{
+  "name": "hapi-example",
+  "description": "An example app to test the Heroku pipeline feature",
+  "scripts": {
+  },
+  "env": {
+    "FOO": "bar",
+    "APP_NAME": {
+      "required": true
+    },
+    "SECRET_KEY": {
+      "generator": "secret"
+    }
+  },
+  "addons": [
+
+  ]
+}
