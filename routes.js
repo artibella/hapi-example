@@ -42,6 +42,10 @@ internals.addProduct = function (request, reply) {
     reply(product).created('/products/' + product.id);
 }
 
+internals.demoRouteHandler = function (request, reply) {
+    reply({"message": "hello"});
+}
+
 
 module.exports = [{
     method: 'GET',
@@ -66,6 +70,12 @@ module.exports = [{
             payload: { name: Joi.string().required().min(3) }
         },
         handler: internals.addProduct
+    }
+}, {
+    method: 'GET',
+    path: '/demo',
+    config: {
+        handler: internals.demoRouteHandler
     }
 }];
 
